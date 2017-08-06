@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>照片墙</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        img{
+            border: 10px solid #ccc;
+            position: absolute;
+            box-shadow: 5px 5px 5px rgba(50, 50, 50, .4);
+            transition: all 1s ease;
+        }
+        #container{
+            width: 490px;
+            height: 330px;
+            margin: 100px auto;
+            position: relative;
+        }
+        #container img:first-child{
+            transform: rotate(30deg);
+        }
+        #container img:last-child{
+            transform: rotate(-20deg);
+        }
+        #container img:hover{
+            transform: scale(1.2) rotate(0);
+            z-index: 1;
+            box-shadow: 10px 10px 5px rgba(50, 50, 50, .4);
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <img src="imgs/img01.jpg" alt=""/>
+        <img src="imgs/img02.jpg" alt=""/>
+    </div>
+</body>
+</html>
